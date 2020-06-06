@@ -55,4 +55,14 @@ public class URIAnalyze {
         LinkInfo linkInfo = getGson().fromJson(json, LinkInfo.class);
         return linkInfo;
     }
+
+    public String getPubcookie() {
+        return pubcookie;
+    }
+
+    public void setPubcookie(String pubcookie) {
+        this.pubcookie = pubcookie;
+        if (httpGet != null)
+            httpGet.setHeader("Cookie", "pubcookie=" + pubcookie);
+    }
 }
