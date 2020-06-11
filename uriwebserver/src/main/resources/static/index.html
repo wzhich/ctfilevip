@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>ctFileVIP</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+	<div id="title_bar">城通网盘高速链接解析</div>
+	<form id="uri_form" action="getVipUri" method="get">
+		<div id="uri_bar">
+			<input id="uri_text" class="uri_controls" type="text" name="originalURI" placeholder="输入原始链接"/>
+			<button id="ok_button" type="button" class="uri_controls">确定</button>
+		</div>
+	</form>
+	<div id="copyright_bar">此项目完全免费,如果遇到收费请立刻举报</div>
+	<div id="statement_bar">
+		<div id="statement_title_bar">
+			<span>声明</span>
+			<button id="close_button"/>
+		</div>
+		<div id="statement_info">
+			本项目是完全免费的我们不会收取任何费用(自愿捐赠除外).<br/>
+			本项目无法保证有效性,如果因使用本项目而造成了损失我们不承担任何责任.<br/>
+			我们会收集并使用你的使用记录.
+		</div>
+		<input id="agree_checkbox" type="checkbox" name="">我已阅读并同意</input>
+		<button id="get_uri_button" type="button" class="uri_controls">获取高速链接</button>
+	</div>
+	<div id="vip_uri_bar">
+		<span>没有找到链接</span>
+		<button class="vip_uri_button" value="#">链接一</button>
+		<button class="vip_uri_button" value="#">链接二</button>
+		<button class="uri_button" value="#">链接三</button>
+	</div>
+</body>
+</html>
