@@ -1,8 +1,6 @@
 package org.song.ctfilevip.urianalyze;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.internal.GsonBuildConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
@@ -47,7 +45,6 @@ public class URIAnalyze {
     }
 
     public LinkInfo analyze(URIMark uriMark) throws URISyntaxException, IOException {
-        System.out.println(uriMark);
         HttpGet httpGet = getHttpGet();
         httpGet.setURI(new URI("https://webapi.ctfile.com/getfile.php?f=" + uriMark.getMark()));
         httpGet.setHeader("Origin", uriMark.getFileHost());

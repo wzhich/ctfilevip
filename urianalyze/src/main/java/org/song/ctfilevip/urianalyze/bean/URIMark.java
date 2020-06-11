@@ -7,7 +7,6 @@ public class URIMark {
    public URIMark(String uri) {
       fileHost = uri.substring(0,uri.indexOf("/file"));
       mark = uri.substring(uri.lastIndexOf("file/")+5);
-      System.out.println(uri);
    }
 
    public String getFileHost() {
